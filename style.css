@@ -1,0 +1,209 @@
+/* Enhanced CSS */
+/* Animations */
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 1s ease forwards;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.card, .btn-contact, .btn-primary, .btn-success {
+    transition: box-shadow 0.3s, transform 0.3s, background 0.3s;
+}
+.card:hover {
+    transform: translateY(-8px) scale(1.03);
+}
+.btn-contact:hover, .btn-primary:hover, .btn-success:hover {
+    transform: scale(1.12) rotate(-2deg);
+}
+
+section {
+    transition: background 0.5s, box-shadow 0.5s;
+}
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@400;500&display=swap');
+
+body {
+    font-family: 'Montserrat', 'Roboto', Arial, sans-serif;
+    background: linear-gradient(135deg, #f8fafc 0%, #e0e7ff 100%);
+    color: #222;
+}
+
+nav.navbar {
+    background: linear-gradient(90deg, #6a11cb 0%, #2575fc 100%) !important;
+    box-shadow: 0 2px 12px rgba(106,17,203,0.1);
+}
+
+.navbar-brand {
+    font-weight: 700;
+    letter-spacing: 2px;
+    font-size: 2rem;
+}
+
+.navbar-nav .nav-link {
+    color: #fff !important;
+    transition: color 0.2s, background 0.2s;
+    border-radius: 8px;
+    margin: 0 4px;
+}
+.navbar-nav .nav-link:hover, .navbar-nav .nav-link.active {
+    background: #fff;
+    color: #2575fc !important;
+}
+
+section#home {
+    background: linear-gradient(120deg, #f1e9ef 0%, #c2e9fb 100%);
+    box-shadow: 0 4px 32px rgba(106,17,203,0.08);
+}
+
+.card {
+    border-radius: 18px;
+    box-shadow: 0 4px 24px rgba(106,17,203,0.08);
+    transition: box-shadow 0.3s;
+}
+.card:hover {
+    box-shadow: 0 8px 32px rgba(37,117,252,0.15);
+}
+
+.card-header {
+    border-radius: 18px 18px 0 0;
+}
+
+.btn-contact, .btn-primary, .btn-success {
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-weight: 500;
+    background: linear-gradient(90deg, #ff00b3 0%, #2575fc 100%);
+    color: #fff;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 30px;
+    font-size: 18px;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(255,0,179,0.08);
+}
+.btn-contact:hover, .btn-primary:hover, .btn-success:hover {
+    background: linear-gradient(90deg, #2575fc 0%, #ff00b3 100%);
+    color: #fff;
+    transform: scale(1.08);
+    box-shadow: 0 0 15px rgba(37,117,252,0.15);
+}
+
+.list-group-item {
+    font-size: 1.1rem;
+    background: #f8fafc;
+    border: none;
+    border-bottom: 1px solid #e0e7ff;
+    transition: background 0.2s;
+}
+.list-group-item:hover {
+    background: #e0e7ff;
+}
+
+section#notes .card {
+    background: linear-gradient(120deg, #e0e7ff 0%, #f1e9ef 100%);
+    border: 1px solid #c2e9fb;
+}
+section#notes h2 {
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-weight: 700;
+    color: #2575fc;
+    letter-spacing: 1px;
+}
+
+footer {
+    background: linear-gradient(90deg, #6a11cb 0%, #2575fc 100%) !important;
+    color: #fff;
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+}
+
+body {
+    scroll-behavior: smooth;
+}
+
+section {
+    padding: 60px 0;
+}
+
+.multi-column {
+    column-count: 2;
+    column-gap: 32px;
+}
+
+.home-photo {
+    width: 180px;
+    height: 180px;
+    border: 5px solid #2575fc;
+    object-fit: cover;
+    box-shadow: 0 2px 16px rgba(37,117,252,0.08);
+}
+
+.btn-contact {
+    background-color: #f1e9ef;
+    color: rgb(255, 2, 128);
+    border: none;
+    padding: 12px 30px;
+    border-radius: 30px;
+    font-size: 18px;
+    transition: all 0.3s ease;
+}
+
+.btn-contact:hover {
+    background-color: #ff00b3;
+    transform: scale(1.1);
+    box-shadow: 0 0 15px rgba(0, 128, 255, 0.5);
+}
+
+.card-img-top {
+    height: 180px;
+    object-fit: cover;
+    border-radius: 18px 18px 0 0;
+}
+
+img {
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+img:hover {
+    transform: scale(1.08);
+    opacity: 0.92;
+}
+
+
+/* Responsive Styles */
+
+@media (max-width: 991px) {
+    .multi-column {
+        column-count: 1;
+    }
+    .home-photo {
+        width: 120px;
+        height: 120px;
+    }
+}
+
+@media (max-width: 767px) {
+    .multi-column {
+        column-count: 1;
+    }
+    .home-photo {
+        width: 120px;
+        height: 120px;
+    }
+    h1.display-3 {
+        font-size: 2.5rem;
+    }
+    .lead {
+        font-size: 1.1rem;
+    }
+    .btn-contact {
+        font-size: 16px;
+        padding: 10px 25px;
+    }
+}
